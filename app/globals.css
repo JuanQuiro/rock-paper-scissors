@@ -1,7 +1,4 @@
 @tailwind base;
-.anni {
-  @apply hover:-translate-x-[0.35rem] hover:-translate-y-[0.35rem];
-}
 
 .marco {
   @apply transition ease-in-out hover:-translate-x-[0.03rem] hover:-translate-y-[0.03rem] delay-150  hover:scale-[1.01] hover:fill-green-700 duration-300;
@@ -9,5 +6,6 @@
 .objeto {
   @apply transition ease-in-out delay-150 hover:-translate-x-[0.35rem] hover:-translate-y-[0.35rem] hover:scale-110 duration-300;
 }
+
 @tailwind components;
 @tailwind utilities;

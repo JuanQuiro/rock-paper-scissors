@@ -1,15 +1,16 @@
 import React from "react";
 import Image from "next/image";
+import logo from './logo.svg'
 
 export const Navbar = () => {
   return (
     <section className="flex justify-center">
       <div className="grid shadow-lg cursor-default grid-cols-2 btn w-2/4 p-7 rounded-2xl h-auto bg-transparent my-7 border-[3px] normal-case border-[#5F6D88]">
         <Image
-          src="/logo.svg"
+          src={logo}
           alt="It is the name of the game"
-          width={100}
-          height={100}
+          
+          priority
         />
         <div className="flex  justify-end">
           <div className="py-4 px-7 rounded-lg shadow-xl bg-[#F8F8F8]">
