@@ -190,12 +190,6 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Juego de Piedra, Papel o Tijeras</h1>
-      <button onClick={generarOpcionAleatoria}>Generar opción aleatoria</button>
-      {opcion && <p>La opción aleatoria generada es: {opcion}</p>}
-      <p>
-      {`La victoria es para ${result}`}
-      </p>
     </div>
   );
 }
