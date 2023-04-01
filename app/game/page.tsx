@@ -1,29 +1,56 @@
 "use client";
-import React, {useState } from "react";
+import React, {useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import {useOpcionesStore} from '../store/opcionesStore'
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { shallow } from 'zustand/shallow'
 
 
 export default function Page() {
-  const [opcion, setOpcion] = useState("")
-  const notifyPapel = () => toast("📜 - Haz Elegido Papel");
-  const notifyTijera = () => toast("✂️ - Haz Elegido Tijera");
-  const notifyPiedra = () => toast("✊🏻 - Haz Elegido Piedra");
 
+  const { posibilidades } = useOpcionesStore((state) => ({
+    posibilidades: state.posibilidades,
+  }), shallow)
+
+  const {updateOpcion} = useOpcionesStore()
+
+  const bienvendia = () => mensaje();
+  useEffect(() => {
+    bienvendia();
+  }, [])
+
+  const mensaje = () => {
+      toast('Bienvenido al juego🤖', {
+      position: "bottom-left",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+});
+  };
+  
+  const notifyPapel = () => toast("HUMANO - 📜  Haz Elegido Papel");
+  const notifyTijera = () => toast("HUMANO - ✂️  Haz Elegido Tijera");
+  const notifyPiedra = () => toast("HUMANO - ✊  Haz Elegido Piedra");
+
+  
   const handleClickPapel = () => {
-  setOpcion("papel");
+    updateOpcion("papel")
   notifyPapel();
   }
   
   const handleClickPiedra = () => {
-  setOpcion("piedra");
-  notifyPiedra();
+    updateOpcion("piedra")  
+    notifyPiedra(); 
   }
   
   const handleClickTijera = () => {
-  setOpcion("tijera");
+  updateOpcion("tijera")  
   notifyTijera();
 }
 
@@ -166,8 +193,8 @@ export default function Page() {
         
       </motion.svg>
       <ToastContainer
-position="bottom-left"
-autoClose={1000}
+position="bottom-right"
+autoClose={2000}
 hideProgressBar={false}
 newestOnTop={false}
 closeOnClick
@@ -176,7 +203,7 @@ pauseOnFocusLoss
 draggable
 pauseOnHover
 theme="dark"
-/>
+      />
 
     </div>
 
