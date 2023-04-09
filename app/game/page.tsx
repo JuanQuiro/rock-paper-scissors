@@ -1,4 +1,5 @@
 "use client";
+
 import React, {useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {useOpcionesStore} from '../store/opcionesStore'
@@ -6,6 +7,7 @@ import {useOpcionesStore} from '../store/opcionesStore'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { shallow } from 'zustand/shallow'
+import { Navbar } from "../Navbar";
 
 
 export default function Page() {
@@ -55,6 +57,8 @@ export default function Page() {
 }
 
   return (
+    <div className="bg-[#171D3F] w-screen h-screen">
+      <Navbar />
     <div className="flex flex-col justify-center items-center">
       <motion.svg
         width={304}
@@ -206,6 +210,7 @@ theme="dark"
       />
 
     </div>
+</div>
 
   );
 }
