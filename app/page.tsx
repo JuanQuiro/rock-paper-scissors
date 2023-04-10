@@ -42,14 +42,14 @@ const GamePage = () => {
           </p>
           <Link href="/game">
             <div
-              className={`rounded-full px-6 py-2 font-bold text-lg outline-none transition-colors duration-300 ${
+              className={` rounded-full px-6 py-2  font-bold text-lg outline-none transition-colors duration-300 ${
                 selectedGame === "basic"
                   ? "bg-blue-500 text-white"
                   : "bg-white text-gray-700 hover:bg-blue-500 hover:text-white"
               }`}
               role="button"
             >
-              Jugar <MdKeyboardArrowRight className="inline-block ml-2" />
+              Jugar <MdKeyboardArrowRight className=" inline-block text-left ml-2" />
             </div>
           </Link>
         </motion.div>
