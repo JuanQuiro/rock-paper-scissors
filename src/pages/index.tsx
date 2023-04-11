@@ -21,7 +21,7 @@ const GamePage = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h1 className="text-4xl font-bold mb-8">Piedra, Papel y Tijeras</h1>
+      <h1 className="text-4xl text-black font-bold mb-8">Piedra, Papel y Tijeras</h1>
       <div className="w-full max-w-5xl h-full grid grid-cols-1 md:grid-cols-2 gap-8">
         <motion.div
           className={`p-8 bg-white rounded-lg shadow-lg ${
@@ -36,7 +36,7 @@ const GamePage = () => {
             <GiSwordClash size={48} className="text-blue-500 mr-2" />
             <GiSpockHand size={48} className="text-blue-500" />
           </div>
-          <h2 className="text-2xl font-bold mb-4">Juego Básico</h2>
+          <h2 className="text-2xl font-bold mb-4 text-black">Juego Básico</h2>
           <p className="text-gray-700 mb-4">
             ¡Juega al clásico juego de piedra, papel o tijeras! Elige tu arma y descubre si eres el ganador. ¡Diviértete! 😄
           </p>
@@ -64,7 +64,7 @@ const GamePage = () => {
           <div className="flex items-center justify-center mb-4">
             <FaGamepad size={48} className="text-red-500 mr-2" />
           </div>
-          <h2 className="text-2xl font-bold mb-4">Juego Extendido</h2>
+          <h2 className="text-2xl font-bold mb-4 text-black">Juego Extendido</h2>
           <p className="text-gray-700 mb-4">
             ¡Juega al juego de piedra, papel o tijeras con más armas! Ahora puedes elegir entre cinco diferentes armas y
             descubrir si eres el ganador. ¡Diviértete! 😄

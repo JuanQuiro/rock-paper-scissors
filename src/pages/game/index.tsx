@@ -13,14 +13,7 @@ import Tijeras from './svg/Tijeras';
 
 type Choice = 'rock' | 'paper' | 'scissors' | 'lizard' | 'spock';
 
-type Round = {
-  id: number;
-  result: {
-    machineChoice: Choice;
-    playerChoice: Choice;
-    winner?: 'player' | 'machine' | 'draw';
-  };
-};
+
 
 
 export default function Page(): JSX.Element {
@@ -53,8 +46,6 @@ export default function Page(): JSX.Element {
     getResult: state.getResult,
     winner: state.winner,
   }),);
-  console.log(`${rounds}`);
-  console.log(winner);
 
   useEffect(() => {
     getResult(machineChoice,playerChoice)
@@ -77,9 +68,9 @@ export default function Page(): JSX.Element {
     result: {
       machineChoice,
       playerChoice
-    }
+    } 
   };
-  setRounds([...rounds, round]);
+  setRounds([...rounds as any, round as any]);
   setCurrentRound(currentRound + 1);
 };
 
@@ -96,7 +87,6 @@ export default function Page(): JSX.Element {
   };
 
 
-  console.log(rounds);
 
   return (
     <>
