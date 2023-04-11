@@ -15,7 +15,7 @@ const backdropVariants = {
   exit: { opacity: 0 },
 };
 
-const Modal = ({ isOpen, onClose, results }) => {
+const Modal = ({ isOpen, onClose, results }:any) => {
       const {
     playerChoice,
     machineChoice,
