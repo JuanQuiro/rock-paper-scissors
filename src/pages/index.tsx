@@ -5,6 +5,7 @@ import { FaGamepad } from "react-icons/fa";
 import { GiPunchBlast, GiSpockHand, GiSwordClash } from "react-icons/gi";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import Link from "next/link";
+import React from "react";
 
 const GamePage = () => {
   const [selectedGame, setSelectedGame] = useState<"basic" | "extended">("basic");

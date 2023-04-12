@@ -1,23 +1,26 @@
 'use client'
 import React from "react";
-import Image from "next/image";
-import logo from '../../../public/logo.svg'
+
+import Image, { ImageProps } from 'next/image';
+import myImage from './logo.svg';
+
 import { motion } from "framer-motion"
 
 
 export const Navbar = (puntajes: any) => {
+  const myImageProps: ImageProps = {
+    src: myImage,
+    alt: 'My Image',
+    objectFit: 'contain',
+  };
+
   const { puntaje } = puntajes;
   console.log(puntaje);
   
   return (
     <section className="flex justify-center">
       <div className="grid shadow-lg transition duration-500 hover:bg-black cursor-default grid-cols-2 btn w-2/4 p-7 rounded-2xl h-auto bg-transparent my-7 border-[3px] normal-case border-[#5F6D88]">
-        <Image
-          src={logo}
-          alt="It is the name of the game"
-          
-          priority
-        />
+        <Image {...myImageProps} />
         <div className="flex  justify-end">
           <motion.div
           animate={{
@@ -37,3 +40,5 @@ export const Navbar = (puntajes: any) => {
     </section>
   );
 };
+
+export default Navbar;

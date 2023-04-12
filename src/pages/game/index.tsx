@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Navbar } from '../components/Navbar';
-import rockPaperScissorsStore from '../store/useRockPaperScissorsStore';
-import Modal from '../components/Modal';
+import Navbar from '../../components/Navbar';
+import rockPaperScissorsStore from '../../store/useRockPaperScissorsStore';
+import Modal from '../../components/Modal';
 
 
 //import img
@@ -10,6 +10,7 @@ import Triangulo from './svg/Triangulo';
 import Mano from './svg/Mano';
 import Piedra from './svg/Piedra';
 import Tijeras from './svg/Tijeras';
+import React from 'react';
 
 type Choice = 'rock' | 'paper' | 'scissors' | 'lizard' | 'spock';
 
